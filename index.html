@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day | Forever Yours</title>
+    <meta name="description" content="A special Valentine's Day surprise created just for you.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Playfair Display for headers, Montserrat for text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Custom Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Background Particles/Hearts Container -->
+    <div id="particles-container"></div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="assets/music/love-you-to-death.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#hero">Intro</a></li>
+            <li><a href="#gallery">Us</a></li>
+            <li><a href="#letter">My Letter</a></li>
+            <li><a href="#final">My Message</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="fullscreen-section">
+        <div class="ornate-corner top-left"></div>
+        <div class="ornate-corner top-right"></div>
+        <div class="ornate-corner bottom-left"></div>
+        <div class="ornate-corner bottom-right"></div>
+
+        <div class="content fade-in">
+            <div class="top-credit">Made it by your only husband Arda</div>
+            <h1 class="glitter-text">The Way I Love You, Leah</h1>
+            <p class="subtitle italic">Deeper with every second...</p>
+
+            <!-- Heartbeat Heart Shape Line -->
+            <div class="heartbeat-container">
+                <svg viewBox="0 0 500 100" class="heartbeat-svg">
+                    <path class="heartbeat-path"
+                        d="M0,50 L200,50 C200,50 210,20 230,20 C250,20 250,50 250,50 C250,50 250,20 270,20 C290,20 300,50 300,50 L300,50 L310,30 L320,70 L330,10 L340,90 L350,50 L500,50" />
+                </svg>
+                <span class="heartbeat-text">The Rhythm of My Love</span>
+            </div>
+
+
+
+            <!-- Together Timer -->
+            <div id="together-timer-container">
+                <div id="together-timer">00d 00h 00m 00s</div>
+                <p class="timer-label">the time we spent together</p>
+            </div>
+
+            <div class="song-dedication">
+                <p class="song-title">Type O Negative - Love You To Death</p>
+                <div id="music-control" class="stylish-play-btn">
+                    <span id="play-status-icon">▶</span>
+                    <span id="play-status-text">Play Our Song</span>
+                </div>
+                <p class="dedication-msg">"I love our song so I chose this one"</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2. Image Gallery Section -->
+    <section id="gallery" class="reveal-section">
+        <div class="container">
+            <h2 class="section-title">Us</h2>
+            <div class="grid">
+                <div class="grid-item"><img src="assets/images/10bcbdc51fdacda178fbf70267e19251.jpg" alt="Memory 1">
+                </div>
+                <div class="grid-item"><img src="assets/images/1fc0aa6e3ab0f26538f33079a085816e.jpg" alt="Memory 2">
+                </div>
+                <div class="grid-item"><img src="assets/images/2617d2609028ea3f4bf4a9a9396c0840.jpg" alt="Memory 3">
+                </div>
+                <div class="grid-item"><img src="assets/images/69d4f553a801270cc080e78402855353.jpg" alt="Memory 4">
+                </div>
+                <div class="grid-item"><img src="assets/images/dfc08fab08287fe7e0617b17371a3a67.jpg" alt="Memory 5">
+                </div>
+                <div class="grid-item"><img src="assets/images/f59c0de009d7695e93a19e7d39f9b40e.jpg" alt="Memory 6">
+                </div>
+            </div>
+
+            <!-- Make a Wish Section (Interactive Flow) -->
+            <div class="wish-section reveal-section">
+                <div class="letter-box wish-container">
+                    <h3 class="wish-title">Make a Wish</h3>
+
+                    <!-- Step 1: Initial Button -->
+                    <div id="wish-step-1" class="wish-step active-step">
+                        <div id="start-wish" class="wish-btn">click to me if u make the wish</div>
+                    </div>
+
+                    <!-- Step 2: First Question -->
+                    <div id="wish-step-2" class="wish-step">
+                        <p class="wish-question">do you wanna know my wish?</p>
+                        <div class="choice-btns">
+                            <button class="choice-btn yes" id="btn-yes-know">Yes</button>
+                            <button class="choice-btn no" id="btn-no-know">No</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Confirmation Question -->
+                    <div id="wish-step-3" class="wish-step">
+                        <p class="wish-question">are u sure? ☹️</p>
+                        <div class="choice-btns">
+                            <button class="choice-btn yes" id="btn-yes-sure">Yes</button>
+                            <button class="choice-btn no" id="btn-no-sure">No</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Okey Message -->
+                    <div id="wish-step-4" class="wish-step">
+                        <p class="wish-question">okey...</p>
+                    </div>
+
+                    <!-- Step 5: The Letter Reveal -->
+                    <div id="wish-step-5" class="wish-step">
+                        <div id="envelope-trigger" class="wish-btn envelope">Open the Letter</div>
+                        <div id="final-wish-message" class="hidden-wish">
+                            My wish is already come true, it's u love.
+                            <div class="wish-heart">❤️</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Love Letter Section -->
+    <section id="letter" class="reveal-section">
+        <div class="container letter-box">
+            <h2 class="section-title italic">From the Depths of My Heart</h2>
+            <div class="letter-content">
+                <p>My Dearest,</p>
+                <p>Since the day you entered my life, everything has become more colorful, more meaningful, and more
+                    beautiful. Every moment spent with you echoes within me like the most beautiful melody of my soul.
+                    It is impossible to describe the peace I find in your eyes or that unique light in your smile.</p>
+                <p>Your presence is like a star lighting up my darkest nights. We grow together, we learn together, and
+                    we love together. I never want to let go of your hand on this journey. You are my most beautiful
+                    "luckily you exist".</p>
+                <p>I will love you more with every breath I take, not just today, but every single moment. I'm so glad
+                    you're here, and so glad you're mine.</p>
+                <p class="signature">Forever yours...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Final Dramatic Section -->
+    <section id="final" class="fullscreen-section">
+        <div class="content reveal-section">
+            <div class="glowing-message">
+                <h2 class="heart-pulse">I Love You So Much, Leah ❤️</h2>
+                <p class="final-date">February 14, 2026</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
